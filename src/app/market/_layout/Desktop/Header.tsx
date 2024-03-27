@@ -2,6 +2,7 @@ import { ChatHeader, Logo } from '@lobehub/ui';
 import { createStyles } from 'antd-style';
 import Link from 'next/link';
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import ShareAgentButton from '../../features/ShareAgentButton';
 
@@ -12,6 +13,8 @@ export const useStyles = createStyles(({ css, token }) => ({
   `,
 }));
 
+const { t } = useTranslation('market');
+
 const Header = memo(() => {
   const { styles } = useStyles();
 
@@ -19,7 +22,7 @@ const Header = memo(() => {
     <ChatHeader
       left={
         <Link aria-label={'home'} href={'/'}>
-          <Logo className={styles.logo} extra={'Discover'} size={36} type={'text'} />
+          <Logo className={styles.logo} extra={t('discover')} size={36} type={'flat'} />
         </Link>
       }
       right={<ShareAgentButton />}

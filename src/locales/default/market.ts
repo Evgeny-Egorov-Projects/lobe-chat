@@ -2,6 +2,7 @@ export default {
   addAgent: '添加助手',
   addAgentAndConverse: '添加助手并会话',
   addAgentSuccess: '添加成功',
+  discover: "Discover",
   guide: {
     func1: {
       desc1: '在会话窗口中通过右上角设置进入你想提交助手的设置页面;',
@@ -16,6 +17,7 @@ export default {
       title: '通过 Github 提交',
     },
   },
+  searchbar_title: "Find & Use The Best Agents",
   search: {
     placeholder: '搜索助手名称介绍或关键词...',
   },

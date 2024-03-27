@@ -49,7 +49,7 @@ export const getAppConfig = () => {
 
     AGENTS_INDEX_URL: !!process.env.AGENTS_INDEX_URL
       ? process.env.AGENTS_INDEX_URL
-      : 'https://chat-agents.lobehub.com',
+      : 'https://lobe-chat-agents-lemon.vercel.app',
 
     PLUGINS_INDEX_URL: !!process.env.PLUGINS_INDEX_URL
       ? process.env.PLUGINS_INDEX_URL

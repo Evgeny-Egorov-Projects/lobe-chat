@@ -9,10 +9,13 @@ import { Center, Flexbox } from 'react-layout-kit';
 import SafeSpacing from '@/components/SafeSpacing';
 import ClientResponsiveLayout from '@/components/client/ClientResponsiveLayout';
 import { MAX_WIDTH } from '@/const/layoutTokens';
+import { useTranslation } from 'react-i18next';
 
 import Header from './Header';
 
 const SideBar = dynamic(() => import('./AgentDetail'));
+
+const { t } = useTranslation('market');
 
 const useStyles = createStyles(({ css }) => ({
   background: css`
@@ -39,7 +42,7 @@ const Desktop = memo<PropsWithChildren>(({ children }) => {
 
           <Flexbox gap={16} style={{ maxWidth: MAX_WIDTH, position: 'relative', width: '100%' }}>
             <Center>
-              <h1 className={styles.title}>Find & Use The Best Agents</h1>
+              <h1 className={styles.title}>{t('searchbar_title')}</h1>
               <GridBackground
                 animation
                 className={styles.background}
